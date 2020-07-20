@@ -32,15 +32,15 @@
             </div>
             <div class="mgm-divider"></div>
             <div class="item">
-                <a href="#" class="tag ">داشبورد</a>
+                <a href="{{route('mgm_main')}}" class="tag ">داشبورد</a>
             </div>
             <div class="mgm-divider"></div>
             <div class="item">
-                <a href="#" class="tag ">مدیریت کاربران</a>
+                <a href="{{route('mgm_users')}}" class="tag ">مدیریت کاربران</a>
             </div>
             <div class="mgm-divider"></div>
             <div class="item">
-                <a href="#" class="tag ">مدیریت دسته بندی ها</a>
+                <a href="{{route('mgm_category')}}" class="tag ">مدیریت دسته بندی ها</a>
             </div>
             <div class="mgm-divider"></div>
             <div class="item">
@@ -54,8 +54,8 @@
         <div class="col-md-10 mgm-dashboard">
             <div class="col-md-12 mgm-top-bar">
                 <div class="col-md-2">جمعه - 1399/04/07</div>
-                <div class="col-md-8"></div>
-                <div class="col-md-2">داشبورد</div>
+                <div class="col-md-6"></div>
+                <div class="col-md-4">@yield('template-title')</div>
             </div>
             <div class="mgm-content-container">
                 @yield('content')

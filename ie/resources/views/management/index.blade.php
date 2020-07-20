@@ -1,4 +1,7 @@
 @extends('templates.management-template')
+@section('template-title')
+    داشبورد
+@stop
 @section('content')
     <div class="mgm-users">
         <div class="col-md-12 mgm-user-container">
@@ -9,7 +12,7 @@
                         <div class="card-body">
                             <div style="margin-bottom: 10px;" class="text-center">
                                 <span>تعداد کاربران سایت:</span>
-                                <span>1254</span>
+                                <span>{{$users}}</span>
                             </div>
                             <div class="user-tbl">
                                 <div class="row">
@@ -25,38 +28,38 @@
                                             <tbody class="green">
                                             <tr>
                                                 <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>{{isset($cities[0])?$cities[0]->city:'---'}}</td>
+                                                <td>{{isset($cities[0])?$cities[0]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>2</td>
+                                                <td>{{isset($cities[1])?$cities[1]->city:'---'}}</td>
+                                                <td>{{isset($cities[1])?$cities[1]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>3</td>
+                                                <td>{{isset($cities[2])?$cities[2]->city:'---'}}</td>
+                                                <td>{{isset($cities[2])?$cities[2]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>4</td>
+                                                <td>{{isset($cities[4])?$cities[4]->city:'---'}}</td>
+                                                <td>{{isset($cities[4])?$cities[4]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>5</td>
+                                                <td>{{isset($cities[4])?$cities[4]->city:'---'}}</td>
+                                                <td>{{isset($cities[4])?$cities[4]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>6</td>
+                                                <td>{{isset($cities[5])?$cities[5]->city:'---'}}</td>
+                                                <td>{{isset($cities[5])?$cities[5]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>7</td>
+                                                <td>{{isset($cities[6])?$cities[6]->city:'---'}}</td>
+                                                <td>{{isset($cities[6])?$cities[6]->users: 0}}</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -72,40 +75,41 @@
                                             </thead>
                                             <tbody class="yellow">
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>8</td>
+                                                <td>{{isset($cities[7])?$cities[7]->city:'---'}}</td>
+                                                <td>{{isset($cities[7])?$cities[7]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>9</td>
+                                                <td>{{isset($cities[8])?$cities[8]->city:'---'}}</td>
+                                                <td>{{isset($cities[8])?$cities[8]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>10</td>
+                                                <td>{{isset($cities[9])?$cities[9]->city:'---'}}</td>
+                                                <td>{{isset($cities[9])?$cities[9]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>11</td>
+                                                <td>{{isset($cities[10])?$cities[10]->city:'---'}}</td>
+                                                <td>{{isset($cities[10])?$cities[10]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>12</td>
+                                                <td>{{isset($cities[11])?$cities[11]->city:'---'}}</td>
+                                                <td>{{isset($cities[11])?$cities[11]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>13</td>
+                                                <td>{{isset($cities[12])?$cities[12]->city:'---'}}</td>
+                                                <td>{{isset($cities[12])?$cities[12]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>14</td>
+                                                <td>{{isset($cities[13])?$cities[13]->city:'---'}}</td>
+                                                <td>{{isset($cities[13])?$cities[13]->users: 0}}</td>
                                             </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -120,39 +124,39 @@
                                             </thead>
                                             <tbody class="red">
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>15</td>
+                                                <td>{{isset($cities[14])?$cities[14]->city:'---'}}</td>
+                                                <td>{{isset($cities[14])?$cities[14]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>16</td>
+                                                <td>{{isset($cities[15])?$cities[15]->city:'---'}}</td>
+                                                <td>{{isset($cities[15])?$cities[15]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>17</td>
+                                                <td>{{isset($cities[16])?$cities[16]->city:'---'}}</td>
+                                                <td>{{isset($cities[16])?$cities[16]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>18</td>
+                                                <td>{{isset($cities[17])?$cities[17]->city:'---'}}</td>
+                                                <td>{{isset($cities[17])?$cities[17]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>19</td>
+                                                <td>{{isset($cities[18])?$cities[18]->city:'---'}}</td>
+                                                <td>{{isset($cities[18])?$cities[18]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>20</td>
+                                                <td>{{isset($cities[19])?$cities[19]->city:'---'}}</td>
+                                                <td>{{isset($cities[19])?$cities[19]->users: 0}}</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>تهران</td>
-                                                <td>120</td>
+                                                <td>21</td>
+                                                <td>{{isset($cities[20])?$cities[20]->city:'---'}}</td>
+                                                <td>{{isset($cities[20])?$cities[20]->users: 0}}</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -163,23 +167,25 @@
                     </div>
                 </div>
                 <div class="col-md-4 user-left-side">
-                    <div class="col-md-12" >
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 نرخ ورود کاربران
                             </div>
                             <div class="card-body">
                                 <canvas id="sales-chart"></canvas>
+                                <div id="registered_users" style="display: none !important;">{{$registered_users}}</div>
                             </div>
                         </div>
                     </div><!-- /# column -->
-                    <div class="col-md-12" >
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 نرخ بارگذاری آگهی ها
                             </div>
                             <div class="card-body">
                                 <canvas id="sales-chart1"></canvas>
+                                <div id="com_rate" style="display: none !important;">{{$coms}}</div>
                             </div>
                         </div>
                     </div><!-- /# column -->
@@ -204,22 +210,22 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                        <tr>
                                             <td>شلوار جین</td>
                                             <td>100</td>
                                         </tr>
-                                            <tr>
-                                                <td>شلوار جین</td>
-                                                <td>100</td>
-                                            </tr>
-                                            <tr>
-                                                <td>شلوار جین</td>
-                                                <td>100</td>
-                                            </tr>
-                                            <tr>
-                                                <td>شلوار جین</td>
-                                                <td>100</td>
-                                            </tr>
+                                        <tr>
+                                            <td>شلوار جین</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>شلوار جین</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>شلوار جین</td>
+                                            <td>100</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>

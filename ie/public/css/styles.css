@@ -716,12 +716,13 @@ div.mgm-sidebar .tag.exit {
 
 div.mgm-dashboard {
     padding: 0;
-    z-index: -1;
+    position: relative;
 }
 
 div.mgm-top-bar {
     background-color: #fff;
     height: 60px;
+    z-index: -1;
     border-bottom: 1px solid #bebebe;
     box-shadow: 0 0 5px #bebebe;
     font-size: 110%;
@@ -729,23 +730,105 @@ div.mgm-top-bar {
     padding: 10px;
 }
 
-div.mgm-content-container{
+div.mgm-content-container {
     padding: 10px 10px;
 }
-div.mgm-users{
+
+div.mgm-users {
     margin-top: 50px;
 }
 
-div.mgm-user-container{
+div.mgm-user-container {
     margin-top: 20px;
 }
 
-.green{
+.green {
     background-color: rgba(0, 216, 0, 0.27);
 }
-.yellow{
+
+.yellow {
     background-color: rgba(239, 255, 0, 0.18);
 }
-.red{
+
+.red {
     background-color: rgba(255, 0, 0, 0.12);
+}
+
+div.user-tbl table{
+    font-size: 70%;
+}
+
+div.cats-container {
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+div.cat-area div.cat {
+    background-color: brown;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+div.cat-area div.subcat {
+    background-color: white;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 5px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 90%;
+    border-radius: 50px;
+}
+
+.subcat-input {
+    margin-right: 40px;
+    height: 30px;
+    width: 220px;
+    border-radius: 0 10px 10px 0 !important;
+    text-align: center;
+    font-size: 75%;
+    margin-bottom: 30px;
+}
+
+.subcat-button {
+    height: 30px;
+    padding: 1px 15px;
+    border-radius: 10px 0 0 10px !important;
+    font-size: 80%;
+    margin-right: 105%;
+}
+
+div.new-cat {
+    margin-top: 75px;
+}
+
+div.new-cat form div {
+    float: right;
+    width: 30%;
+}
+
+div.new-cat form div input {
+    border-radius: 0 5px 5px 0;
+}
+
+div.new-cat form button {
+    border-radius: 5px 0 0 5px !important;
+    width: 7%;
+}
+
+button.btn-mgm-last {
+    width: 25% !important;
+}
+
+.users-opr a {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.users-opr span img {
+    width: 20px;
+    height: 20px;
 }

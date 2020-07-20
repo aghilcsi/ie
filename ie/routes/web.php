@@ -41,3 +41,5 @@ Route::get('/commercial_view', 'commercialController@commercial_view')->name('co
 Route::post('/rate_increment', 'commercialController@rate_increment_ajax');
 
 Route::get('/cmc_mngmt', "managmentController@index")->name('mgm_main');
+Route::get('/cmc_categories', "managmentController@show_category_page")->name('mgm_category');
+Route::get('/cmc_users', "managmentController@show_users_page")->name('mgm_users');

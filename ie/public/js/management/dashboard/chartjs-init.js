@@ -78,16 +78,18 @@
 
     //Sales chart
     var ctx = document.getElementById("sales-chart");
+    let val = document.getElementById("registered_users").innerHTML;
+    val = val.split(',');
     ctx.height = 150;
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
+            labels: ['-31','30-','29-','28-','27-','26-','25-','24-','23-','22-','21-','20-','19-','18-','17-','16-','15-','14-','13-','12-','11-','10-','9-','8-','7-','6-','5-','4-','3-','2-','دیروز', 'امروز'],
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
-                label: "Electronics",
-                data: [0, 50, 40, 80, 40, 79, 120],
+                label: "نفرات",
+                data: [val[30],val[29],val[28],val[31],val[27],val[26],val[25],val[24],val[23],val[22],val[21],val[20],val[19],val[18],val[17],val[16],val[15],val[14],val[13],val[12],val[11],val[10],val[9],val[8],val[7],val[6],val[5],val[4],val[3],val[2],val[1],val[0]],
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(40,167,69,0.75)',
                 borderWidth: 3,
@@ -149,16 +151,18 @@
     });
 
     var ctx = document.getElementById("sales-chart1");
+    let val1 = document.getElementById("com_rate").innerHTML;
+    val1 = val1.split(',');
     ctx.height = 150;
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
+            labels: ['-31','30-','29-','28-','27-','26-','25-','24-','23-','22-','21-','20-','19-','18-','17-','16-','15-','14-','13-','12-','11-','10-','9-','8-','7-','6-','5-','4-','3-','2-','دیروز', 'امروز'],
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
-                label: "Electronics",
-                data: [5,1,1,0,0,0,0,10,7,5,11,0,0,1,0,0,2,0,3,4,7,2,9,5,7],
+                label: "تعداد",
+                data: [val1[30],val1[29],val1[28],val1[31],val1[27],val1[26],val1[25],val1[24],val1[23],val1[22],val1[21],val1[20],val1[19],val1[18],val1[17],val1[16],val1[15],val1[14],val1[13],val1[12],val1[11],val1[10],val1[9],val1[8],val1[7],val1[6],val1[5],val1[4],val1[3],val1[2],val1[1],val1[0]],
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(139,71,167,0.75)',
                 borderWidth: 3,

@@ -26,7 +26,7 @@ if (!function_exists('get_today')) {
             case 6:
                 $w = 'شنبه';
                 break;
-            case 7:
+            case 0:
                 $w = 'یکشنبه';
                 break;
             default:

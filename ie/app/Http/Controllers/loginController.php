@@ -15,6 +15,7 @@ class loginController extends Controller
 
     public function show_login_page(Request $request)
     {
+        User::get_user_register_rate();
         $email = $pass = "";
         $rm = null;
         if (Cookie::has('ie-rm')) {
@@ -45,7 +46,6 @@ class loginController extends Controller
     public function show_account_page(Request $request)
     {
         if ($request->session()->has('ie-id')) {
-
             $id = $request->session()->get("ie-id", 0);
             if ($id === 0) {
                 return redirect()->route('login');
