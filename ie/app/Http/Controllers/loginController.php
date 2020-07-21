@@ -15,6 +15,7 @@ class loginController extends Controller
 
     public function show_login_page(Request $request)
     {
+
         User::get_user_register_rate();
         $email = $pass = "";
         $rm = null;

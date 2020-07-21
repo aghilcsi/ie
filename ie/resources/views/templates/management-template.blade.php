@@ -44,11 +44,11 @@
             </div>
             <div class="mgm-divider"></div>
             <div class="item">
-                <a href="#" class="tag exit">خروج از پنل مدیریت</a>
+                <a href="{{route('main')}}" class="tag exit">خروج از پنل مدیریت</a>
             </div>
             <div class="mgm-divider"></div>
             <div class="item">
-                <a href="#" class="tag exit">خروج از سایت</a>
+                <a href="{{route('logout')}}" class="tag exit">خروج از سایت</a>
             </div>
         </div>
         <div class="col-md-10 mgm-dashboard">

@@ -21,9 +21,19 @@ class Category extends Model
     {
         return DB::table('category')->select('name')->where('id', '=', $id)->get()[0];
     }
+
     public static function find_subcategory($id)
     {
         return DB::table('sub_category')->select('name')->where('id', '=', $id)->get()[0];
     }
+
+    public static function new_subcat($cat_id, $name)
+    {
+        DB::table('sub_category')->insert([
+            'cat_id' => $cat_id,
+            'name' => $name
+        ]);
+    }
+
 
 }

@@ -207,4 +207,25 @@ class Commercial extends Model
         return $answer;
 
     }
+
+    public static function get_category_count($id)
+    {
+        return DB::table("commercial")->select(DB::raw('COUNT(id) as cats'))->where('cat_id', '=', $id)->get()[0];
+    }
+
+    public static function get_subcat_count($id)
+    {
+        return DB::table("commercial")->select(DB::raw('COUNT(id) as subcats'))->where('subcat_id', '=', $id)->get()[0];
+    }
+
+    public static function get_commercial_count()
+    {
+        return DB::table("commercial")->select(DB::raw("COUNT(id) as coms"))->get()[0];
+    }
+
+
+
+
+
+
 }

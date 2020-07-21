@@ -198,161 +198,50 @@
                         <div class="card-body">
                             <div class="text-center">
                                 <span>تعداد آگهی های موجود:</span>
-                                <span>254895</span>
+                                <span>{{$com_count}}</span>
                             </div>
                             <div class="row" style="margin-top: 15px;">
-                                <div class="col-md-4">
-                                    <table style="text-align: center;" class="table table-striped">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>پوشاک</th>
-                                            <th>450</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-4">
-                                    <table style="text-align: center;" class="table table-striped">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>پوشاک</th>
-                                            <th>450</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-4">
-                                    <table style="text-align: center;" class="table table-striped">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>پوشاک</th>
-                                            <th>450</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-4">
-                                    <table style="text-align: center;" class="table table-striped">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>پوشاک</th>
-                                            <th>450</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-4">
-                                    <table style="text-align: center;" class="table table-striped">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>پوشاک</th>
-                                            <th>450</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-4">
-                                    <table style="text-align: center;" class="table table-striped">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th>پوشاک</th>
-                                            <th>450</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>شلوار جین</td>
-                                            <td>100</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                @if(count($result_for_cat_table) > 0)
+                                    @foreach($result_for_cat_table as $item)
+                                        <?php $cat_id = $item[0] ?>
+                                        <div class="col-md-4">
+                                            <table style="text-align: center;" class="table table-striped">
+                                                <thead class="thead-dark">
+                                                <tr>
+                                                    <th>{{$item[1]}}</th>
+                                                    <th>{{$item[2]}}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @if(count($item) > 3)
+                                                    @for($i = 3; $i <= count($item)-1; $i+=2)
+                                                        <tr>
+                                                            <td>{{$item[$i]}}</td>
+                                                            <td>{{$item[$i+1]}}</td>
+                                                        </tr>
+                                                    @endfor
+                                                @endif
+                                                <tr>
+                                                    <form action="{{action('managmentController@new_subcat')}}" method="post">
+                                                        {{csrf_field()}}
+                                                        <td colspan="2">
+                                                            <div class="row">
+                                                                <div class="col-md-9">
+                                                                    <input type="text" name="subcat" class="form-control" placeholder="زیر دسته بندی جدید" required max="50" min="5">
+                                                                    <input type="hidden" name="cat" value="<?php echo $cat_id ?>">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <button type="submit" class="btn btn-block btn-primary">ثبت</button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </form>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
                     </div>
